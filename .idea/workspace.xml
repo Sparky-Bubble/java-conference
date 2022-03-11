@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28c872f8-70ef-4644-a944-7044dccd8948" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javaconference.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/sparkybubble/javaconference/JavaconferenceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparkybubble/javaconference/JavaconferenceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sparkybubble/javaconference/JavaconferenceApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/sparkybubble/javaconference/JavaconferenceApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +31,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="JUnit.JavaconferenceApplicationTests.testReadFile">
+  <component name="RunManager" selected="JUnit.JavaconferenceApplicationTests.testSortTalk">
     <configuration name="JavaconferenceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sparkybubble.javaconference.JavaconferenceApplication" />
       <module name="javaconference" />
@@ -83,8 +76,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JavaconferenceApplicationTests.testSortTalk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javaconference" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sparkybubble.javaconference.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sparkybubble.javaconference" />
+      <option name="MAIN_CLASS_NAME" value="com.sparkybubble.javaconference.JavaconferenceApplicationTests" />
+      <option name="METHOD_NAME" value="testSortTalk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JavaconferenceApplicationTests.testSortTalk" />
         <item itemvalue="JUnit.JavaconferenceApplicationTests.testReadFile" />
         <item itemvalue="JUnit.JavaconferenceApplicationTests" />
         <item itemvalue="Application.JavaconferenceApplication" />
