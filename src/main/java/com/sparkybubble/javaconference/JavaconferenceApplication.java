@@ -25,7 +25,7 @@ public class JavaconferenceApplication {
 		System.out.println("========================  // Java Conference // ========================");
 		System.out.println();
 
-		//Figure out a real display
+		// Prints out the tracks with talks
 		int trackNum = 1;
 		for(List<String> list : track) {
 			System.out.println("Track " + trackNum + ":");
@@ -38,7 +38,7 @@ public class JavaconferenceApplication {
 		}
 	}
 
-
+	// Take the input from the file and add to the hashmap named input.
 	public static HashMap<String, Integer> readFile() {
 		HashMap<String, Integer> input = new HashMap<>();
 		String talk; int duration;
@@ -56,24 +56,26 @@ public class JavaconferenceApplication {
 				} else {
 					duration = Integer.parseInt(line.substring(line.lastIndexOf(" ")+1, line.lastIndexOf(" ") + 3));
 				}
+
 				input.put(talk, duration);
 			}
-		}catch(Exception e) {
+		} catch(Exception e) {
 			System.out.println(e);
 		}
 
 		return input;
 	}
 
-
+	// Method where it will sort the talk and separate the morning sessions and after sessions.
 	public static ArrayList<String> sortTalk(HashMap<String, Integer> talks) {
 		Set<String> removed = new HashSet<>();
 		ArrayList<String> sorted = new ArrayList<>();
+
 		int morning = 180, afternoon = 240;
 
 		LocalTime morningSlot = LocalTime.parse("09:00");
 		LocalTime afternoonSlot = LocalTime.parse("13:00");
-//        sorted.add("MORNING");
+
 		Iterator morningIt = talks.entrySet().iterator();
 
 		//while loop for the morning slots
@@ -95,6 +97,7 @@ public class JavaconferenceApplication {
 				removed.add((String)event.getKey());
 			}
 		}
+
 		//removing the talks that have been already placed in the morning slot
 		//this is so that the loop won't have any duplicates for the afternoon slot
 		talks.entrySet().removeIf(entry-> removed.contains(entry.getKey()));
@@ -110,6 +113,7 @@ public class JavaconferenceApplication {
 			}
 
 			Map.Entry<String, Integer> event = (Map.Entry<String, Integer>) afternoonIt.next();
+
 			if(event.getValue() <= afternoon) {
 				//if statement checks to see whether the talk being checked can fit into the slot
 				String time = afternoonSlot.format(
@@ -121,6 +125,7 @@ public class JavaconferenceApplication {
 				removed.add(event.getKey());
 			}
 		}
+
 		talks.entrySet().removeIf(entry-> removed.contains(entry.getKey()));
 		sorted.add("5:00 PM NETWORKING EVENT\n");
 		return sorted;
